@@ -1,8 +1,8 @@
 int cloudX=-270;
 int cloudY=300;
 int airplaneAngle;
-int airplaneX;
-int airplaneY=500;
+int airplaneX=-300;
+int airplaneY=450;
 
 void setup() {
   size(600, 600, P2D);
@@ -14,10 +14,13 @@ void draw() {
   stroke(80, 134, 88);
   fill(57, 55, 237);
   ellipse(300, 700, 650, 320);
+  stroke(252,201,89);
+  fill(252,201,89);
+  ellipse(600,0,200,200);
   airplane(airplaneX,airplaneY,airplaneAngle);
   if (airplaneX>1000) {
     airplaneX=-300;
-    airplaneY=500;
+    airplaneY=450;
   }
   if (airplaneX>=300) {
     airplaneY=airplaneY+1;
@@ -30,7 +33,7 @@ void draw() {
     airplaneAngle=-20;
   }
   cloud(cloudX,cloudY);
-  cloudX=cloudX+1;
+  cloudX=cloudX+2;
   if (cloudX>870) {
     cloudX=-270;
   }
